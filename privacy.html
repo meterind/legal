@@ -6,253 +6,130 @@
   <title>Privacy Policy — Meter</title>
   <style>
     :root {
-      --paper: #faf6ee;
-      --ink: #141108;
-      --ink2: #3a3225;
-      --ink3: #6a6252;
-      --ink4: #a39a86;
-      --line: #e6ddc6;
-      --accent: #f0c132;
+      --paper: #faf6ee; --ink: #141108; --ink2: #3a3225;
+      --ink3: #6a6252; --ink4: #a39a86; --line: #e6ddc6; --accent: #f0c132;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--paper);
-      color: var(--ink);
+      background: var(--paper); color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      padding: 0 20px;
+      font-size: 16px; line-height: 1.6; padding: 0 20px;
     }
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 24px 0 16px;
-      margin-bottom: 28px;
-    }
+    header { border-bottom: 1px solid var(--line); padding: 24px 0 16px; margin-bottom: 28px; }
     .logo { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .logo-dot {
-      width: 10px; height: 10px; border-radius: 3px;
-      background: var(--accent);
-    }
+    .logo-dot { width: 10px; height: 10px; border-radius: 3px; background: var(--accent); }
     .logo-text { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
-    header p { font-size: 13px; color: var(--ink3); }
     h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 6px; }
-    h2 {
-      font-size: 16px; font-weight: 800; margin-top: 32px; margin-bottom: 8px;
-      padding-top: 16px; border-top: 1px solid var(--line);
-      letter-spacing: -0.2px;
-    }
+    h2 { font-size: 16px; font-weight: 800; margin-top: 32px; margin-bottom: 8px; padding-top: 16px; border-top: 1px solid var(--line); }
     p { margin-bottom: 12px; color: var(--ink2); }
     ul { margin: 0 0 12px 20px; }
     li { margin-bottom: 6px; color: var(--ink2); }
-    .notice {
-      background: #fff8e8;
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin: 20px 0;
-      font-size: 14px;
-      color: var(--ink2);
-    }
     .updated { font-size: 12px; color: var(--ink4); font-family: monospace; }
-    footer {
-      margin-top: 48px;
-      padding: 20px 0;
-      border-top: 1px solid var(--line);
-      font-size: 12px;
-      color: var(--ink4);
-      text-align: center;
-    }
+    footer { margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink4); text-align: center; }
     a { color: var(--ink2); }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <div class="logo-dot"></div>
-    <span class="logo-text">METER</span>
-  </div>
+  <div class="logo"><div class="logo-dot"></div><span class="logo-text">METER</span></div>
   <h1>Privacy Policy</h1>
   <p class="updated">Effective date: 9 May 2025 &nbsp;·&nbsp; Version 1.0</p>
 </header>
 
 <p>
   Meter ("the app", "we", "us") is an independent fare comparison tool for iOS.
-  This policy explains what information Meter accesses, how it is used, and what
-  we do not collect. <strong>We do not operate any backend servers.</strong>
-  All data described below is processed locally on your device unless explicitly
-  stated otherwise.
+  This policy explains what information Meter accesses and how it is used.
+  Meter does not operate any backend servers. All processing happens on your device
+  unless stated otherwise.
 </p>
 
-<div class="notice">
-  <strong>Short version:</strong> Meter does not collect personal data, does not
-  create user accounts, and does not transmit your information to Meter-owned
-  servers. Location and saved places stay on your device.
-</div>
-
-<!-- ─── INFORMATION WE ACCESS ──────────────────────────────── -->
 <h2>1. Information We Access</h2>
 
-<h2 style="border:none; font-size:14px; margin-top:16px;">1a. Precise Location (GPS)</h2>
+<p><strong>Location (GPS)</strong></p>
 <p>
-  When you grant location permission, Meter reads your GPS coordinates to:
-</p>
-<ul>
-  <li>Suggest a pickup address (auto-filled in the pickup field).</li>
-  <li>Determine which city you are in so we can display a city label in the
-      weather badge (e.g. "MUM" for Mumbai).</li>
-  <li>Fetch local weather via the Open-Meteo public API (see §3).</li>
-</ul>
-<p>
-  Location data is used in-session only. It is <strong>not stored persistently,
-  not linked to any identifier, and not transmitted to any Meter-owned
-  server.</strong>
-</p>
-<p>
-  Location permission is requested only when you tap the GPS button. You can
-  deny it; the app works fully with manually typed addresses.
+  When you grant location permission, Meter reads your GPS coordinates to suggest
+  a pickup address and display local weather. Location data is used in-session only —
+  it is not stored, not linked to any identifier, and not sent to any Meter server.
+  Location permission is only requested when you tap the GPS button. The app works
+  fully without it.
 </p>
 
-<h2 style="border:none; font-size:14px; margin-top:16px;">1b. Saved Places (Home / Work / Other)</h2>
+<p><strong>Saved Places</strong></p>
 <p>
-  If you save addresses (Home, Work, a custom place), they are stored on your
-  device using iOS's standard app storage (AsyncStorage). They are
-  <strong>never uploaded</strong> to any server.
+  If you save addresses (Home, Work, or a custom place), they are stored locally
+  on your device and never uploaded to any server.
 </p>
 
-<h2 style="border:none; font-size:14px; margin-top:16px;">1c. Onboarding Consent Flag</h2>
+<p><strong>Consent Record</strong></p>
 <p>
-  A single flag ("meter_onboarding_v1") is stored locally to remember that you
-  have accepted these terms so the onboarding screen is not repeated.
+  A flag is stored locally on your device to record that you have accepted these
+  terms, so the consent screen is not shown again. It is deleted when you remove the app.
 </p>
 
-<h2 style="border:none; font-size:14px; margin-top:16px;">1d. Provider Account Sessions (Uber, Ola)</h2>
+<p><strong>Provider Sessions</strong></p>
 <p>
-  If you sign in to Uber or Ola inside the app, your login is handled entirely
-  by an embedded browser showing <em>the provider's own website</em>. Session
-  cookies are stored by iOS's WebView engine, not by Meter. Meter
-  <strong>cannot read your credentials, OTP, or account details.</strong>
-  Meter reads only the publicly visible fare estimates that the provider's
-  website renders.
-</p>
-<p>
-  Meter is <strong>not affiliated with, endorsed by, or a partner of</strong>
-  Uber, Ola, or Rapido.
+  If you sign in to a ride provider within the app, your login is handled entirely
+  by the provider's own website shown in a secure embedded browser.
+  Meter does not have access to your credentials, OTP, or account details.
+  Meter is not affiliated with, endorsed by, or a partner of Uber, Ola, or Rapido.
 </p>
 
-<!-- ─── INFORMATION WE DO NOT COLLECT ────────────────────────── -->
 <h2>2. Information We Do Not Collect</h2>
 <ul>
-  <li>Name, email address, phone number, or any identity.</li>
-  <li>Payment information or financial data.</li>
-  <li>Ride history or booking records.</li>
-  <li>Device identifiers (IDFA, IDFV, UDID).</li>
-  <li>Crash logs, usage analytics, or behavioural data.</li>
-  <li>Advertising profiles of any kind.</li>
+  <li>Name, email, phone number, or any personal identifier</li>
+  <li>Payment or financial information</li>
+  <li>Ride history or booking records</li>
+  <li>Device identifiers or advertising IDs</li>
+  <li>Usage analytics or crash data</li>
 </ul>
+<p>Meter does not use analytics, advertising, or crash-reporting services.</p>
+
+<h2>3. Third-Party Services</h2>
 <p>
-  Meter has <strong>no analytics SDK, no crash-reporting SDK, and no advertising
-  SDK.</strong>
+  Meter uses third-party services to provide maps, address search, weather,
+  and fare estimates. Your pickup and drop coordinates may be transmitted to
+  these services as required to fulfil the app's functions. Each third-party
+  service operates under its own privacy policy. Meter is not responsible for
+  third-party data practices.
 </p>
 
-<!-- ─── THIRD-PARTY SERVICES ──────────────────────────────────── -->
-<h2>3. Third-Party Services We Contact</h2>
-<p>
-  When you use Meter, your device makes network requests to the following
-  third-party services. Each operates under its own privacy policy.
-</p>
-
-<table style="width:100%; border-collapse:collapse; font-size:13px; margin-bottom:16px;">
-  <thead>
-    <tr style="border-bottom:2px solid var(--line);">
-      <th style="text-align:left; padding:8px 4px; color:var(--ink);">Service</th>
-      <th style="text-align:left; padding:8px 4px; color:var(--ink);">Purpose</th>
-      <th style="text-align:left; padding:8px 4px; color:var(--ink);">Data sent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>Google Places API</strong></td>
-      <td style="padding:8px 4px;">Address autocomplete search</td>
-      <td style="padding:8px 4px;">Search text you type</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>Google Directions API</strong></td>
-      <td style="padding:8px 4px;">Road route between pickup and drop</td>
-      <td style="padding:8px 4px;">Pickup &amp; drop coordinates</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>Google Maps SDK</strong></td>
-      <td style="padding:8px 4px;">Map rendering</td>
-      <td style="padding:8px 4px;">Map tile requests (no personal data)</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>Open-Meteo</strong></td>
-      <td style="padding:8px 4px;">Local weather display</td>
-      <td style="padding:8px 4px;">Approximate GPS coordinates</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>Comparify (cabs.comparify.pro)</strong></td>
-      <td style="padding:8px 4px;">Rapido fare estimates</td>
-      <td style="padding:8px 4px;">Pickup &amp; drop coordinates</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--line);">
-      <td style="padding:8px 4px;"><strong>m.uber.com</strong></td>
-      <td style="padding:8px 4px;">Uber fare display (embedded browser)</td>
-      <td style="padding:8px 4px;">Pickup &amp; drop coordinates (in URL)</td>
-    </tr>
-    <tr>
-      <td style="padding:8px 4px;"><strong>book.olacabs.com</strong></td>
-      <td style="padding:8px 4px;">Ola fare display (embedded browser)</td>
-      <td style="padding:8px 4px;">Pickup &amp; drop coordinates (in URL)</td>
-    </tr>
-  </tbody>
-</table>
-<p>
-  Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a><br />
-  Open-Meteo's privacy policy: <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a>
-</p>
-
-<!-- ─── DATA RETENTION ────────────────────────────────────────── -->
 <h2>4. Data Retention</h2>
 <p>
-  Meter stores only two items on your device:
+  Meter stores only your saved places and consent record — both on your device only.
+  Both are deleted when you uninstall the app. We hold no server-side data.
 </p>
-<ul>
-  <li><strong>Saved places</strong> — deleted when you remove the app or manually clear a saved place.</li>
-  <li><strong>Onboarding flag</strong> — deleted when you remove the app.</li>
-</ul>
-<p>We have no server-side data to delete because we collect none.</p>
 
-<!-- ─── CHILDREN ──────────────────────────────────────────────── -->
 <h2>5. Children's Privacy</h2>
 <p>
-  Meter is not directed at children under 13. We do not knowingly collect any
-  information from children. If you believe a child has provided information
-  through Meter, please contact us and we will investigate.
+  Meter is not intended for users under 18. We do not knowingly collect
+  information from minors. If you believe a minor has used Meter, contact us
+  and we will take appropriate action.
 </p>
 
-<!-- ─── CHANGES ───────────────────────────────────────────────── -->
-<h2>6. Changes to This Policy</h2>
+<h2>6. Indian Data Protection</h2>
 <p>
-  If we make material changes to this policy, we will update the effective date
-  at the top and, where appropriate, notify users via an in-app notice on the
-  next launch.
+  Meter complies with applicable Indian data protection law, including the
+  Digital Personal Data Protection Act, 2023 (DPDPA). As Meter does not
+  collect or process personal data on its servers, no data fiduciary
+  obligations arise. Location data processed on-device is not transmitted
+  to or stored by Meter.
 </p>
 
-<!-- ─── CONTACT ───────────────────────────────────────────────── -->
-<h2>7. Contact</h2>
+<h2>7. Changes to This Policy</h2>
 <p>
-  For privacy questions or data requests, contact:<br />
-  <strong>Meter India</strong><br />
+  We will update the effective date if we make material changes and, where
+  appropriate, notify you via an in-app notice on next launch.
+</p>
+
+<h2>8. Contact</h2>
+<p>
+  For privacy questions, contact:<br />
+  <strong>Meter</strong><br />
   <a href="mailto:metercustomercare@gmail.com">metercustomercare@gmail.com</a>
 </p>
 
-<footer>
-  &copy; 2025 Meter &nbsp;·&nbsp;
-  <a href="terms.html">Terms of Use</a>
-</footer>
+<footer>&copy; 2025 Meter &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a></footer>
 
 </body>
 </html>
